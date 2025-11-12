@@ -1,0 +1,153 @@
+.about-container{
+     display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns: one for image, one for text */
+  align-items: center;                   /* Vertically center */
+  justify-content: center;               /* Center horizontally */
+  column-gap: 1rem;                      /* Space between columns */
+  padding: 2rem 0; 
+  margin-left: 12%;
+}
+
+
+.about_img {
+  height: 380px;
+  width: 350px;
+  border-radius: 1.5rem;
+  margin: 0;
+  padding: 0;
+} 
+.about_info{
+  grid-template-columns: repeat(3,140px);
+  gap: 0.5rem;
+  margin-bottom: var(--mb-2);
+}
+.about_box{
+  background-color: var(--container-color);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0.75rem;
+  text-align: center;
+  padding: 12px;
+  margin: 0;
+}
+.about_box2{
+  display: flex;
+  position: absolute;
+  margin-top: 170px;
+  gap: 20px;
+}
+.about_icon{
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+}
+.about_title{
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+.about_subtitle{
+  font-size: var(--tiny-font-size);
+}
+.about_description{
+  padding: 0,4rem,0,0;
+  margin-bottom: var(--mb-2-5);
+
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--title-color);
+  padding: 0.75rem 1.3rem;
+  border-radius: 0.5rem;
+  font-weight: 100;
+  color: white;
+}
+.download{
+margin-top: 100px;
+height: auto;
+margin-left: -150px;
+
+}
+.btn{
+  color: white;
+}
+@media only screen and (max-width:992px){
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .about-container{
+    /* grid-template-columns: 1fr;
+    row-gap: 2.5rem; */
+    grid-template-columns: 1fr;
+    padding-right: 200px;
+  }
+
+  .about_description{
+    margin-left: -85px;
+  }
+  .about-container{
+    margin: 0;
+    padding: 0;
+
+  }
+  .about_img{
+    width: 220px;
+    height: 220px;
+    margin-left: 120px;
+  }
+ 
+  .about_box{
+    padding: 0.75rem 0.5rem;
+    grid-template-columns: 1fr 1fr ;
+    gap: 0px;
+    margin-top: 10px;
+     margin-left:320px; 
+  }
+    .about_box2{
+      grid-template-columns: 1fr;
+      align-items: center;
+      margin-top: 190px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+  }
+  .button{
+    margin-left: -70px;
+  }
+  .about_data{
+    text-align: center;
+  }
+  .about_info{
+    justify-content: center;
+  }
+}
+@media only screen and (max-width:576px){
+  .about_info .grid{
+    grid-template-columns: repeat(2,1fr,1fr);
+
+  }
+  .about_description{
+    padding: 0;
+  }
+   .about_img{
+    width: 230px;
+    height: 230px;
+  
+  }
+  .about_box{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width:350px){
+    .about_info{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
